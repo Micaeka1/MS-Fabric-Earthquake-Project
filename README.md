@@ -1,21 +1,16 @@
 # Project Background
-This project uses world wide earthquakes event data from the United States Geological Survey (USGS). Data is fetched via API calls to the USGS API (see link below) - Python and Spark are used to fetch and process data.
+This project uses world wide earthquakes event data from the United States Geological Survey (USGS). 
+Python and Spark are used to fetch and process the USGS API data [https://earthquake.usgs.gov/fdsnws/event/1/#parameters]. Once fetched, the data is processed incrementally using a medallion architecture consisting of three layer: bronze, silver and gold.
 
-Backround about the company, including the industry, active years, business model, and key business metrics. Explain this from the POV of a data analyst who is working at the company.
+- **Bronze Layer:** Raw data is ingested into the lakehouse via the API calls.
+- **Silver Layer:** Data cleanup and validation are performed in this layer.
+- **Gold Layer:** The dataset is further optimised for business use.
 
-Insights and recommendations are provided on the following key areas:
+Then, using Data Factiry, a data pipeline is created to dynamically define the start_date and end_date parameters that are needed in the url for the API call, and the updated datesets that will be created by schedulling daily API calls to update the data.
 
-- **Category 1:** 
-- **Category 2:** 
-- **Category 3:** 
-- **Category 4:** 
+Finally, a Power BI report shows the map visual of the earthquakes.
 
-The SQL queries used to inspect and clean the data for this analysis can be found here [link].
-
-Targed SQL queries regarding various business questions can be found here [link].
-
-An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
-
+[ADD STEPS OVERVIEW PICTURE]
 
 
 # Data Structure & Initial Checks
