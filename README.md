@@ -1,6 +1,8 @@
 # Project Overview
 This project uses world wide earthquakes event data from the United States Geological Survey (USGS). 
-Python and Spark are used to fetch and process the USGS API data [https://earthquake.usgs.gov/fdsnws/event/1/#parameters]. Once fetched, the data is processed incrementally using a medallion architecture consisting of three layer: bronze, silver and gold. Then, using Data Factiry, a data pipeline is created to dynamically define the start date and end date parameters that are needed in the url for the API call, and the updated datesets that will be created by schedulling daily API calls to update the data. Finally, a Power BI report shows the map visual of the earthquakes.
+Python and Spark are used to fetch and process the USGS API data [https://earthquake.usgs.gov/fdsnws/event/1/#parameters]. 
+
+Once fetched, the data is processed incrementally using a medallion architecture consisting of three layer: bronze, silver and gold. Then, using Data Factiry, a data pipeline is created to dynamically define the start date and end date parameters that are needed in the url for the API call, and the updated datesets that will be created by schedulling daily API calls to update the data. Finally, a Power BI report shows the map visual of the earthquakes.
 
 ![alt text](https://github.com/Micaeka1/MS-Fabric-Earthquake-Project/blob/main/Images/Steps%20Overview.png)
 
@@ -27,10 +29,17 @@ Here we:
 # Gold Layer
 The dataset is further optimised for business use.
 
+![alt text](https://github.com/Micaeka1/MS-Fabric-Earthquake-Project/blob/main/Images/Gold%20Layer.png)
 
 # Data Factory
 
-- **Bronze Layer:** 
+![alt text](https://github.com/Micaeka1/MS-Fabric-Earthquake-Project/blob/main/Images/Pipeline.png)
+
+![alt text](https://github.com/Micaeka1/MS-Fabric-Earthquake-Project/blob/main/Images/Parameter%20set%20up.png)
+
+![alt text](https://github.com/Micaeka1/MS-Fabric-Earthquake-Project/blob/main/Images/Schedule.png)
+
+
 # Power BI Report
 
 ![alt text](https://github.com/Micaeka1/MS-Fabric-Earthquake-Project/blob/main/Images/Earthquake%20visual.png)
