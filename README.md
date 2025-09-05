@@ -1,7 +1,6 @@
-# MS-Fabric-Earthquake-Project
-End-to-end data project in Microsoft Fabric, covering data engineering, Data Factory and Power BI
-
 # Project Background
+This project uses world wide earthquakes event data from the United States Geological Survey (USGS). Data is fetched via API calls to the USGS API (see link below) - Python and Spark are used to fetch and process data.
+
 Backround about the company, including the industry, active years, business model, and key business metrics. Explain this from the POV of a data analyst who is working at the company.
 
 Insights and recommendations are provided on the following key areas:
